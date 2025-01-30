@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Товар - {{ good.title }}</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Товар - {{ good.title }}</h1>
+    <p>Категория - {{ good.category }}</p>
+    <p><img src="{{ good.photo.url }}" width="200"></p>
+    <p>Описание: {{ good.description }}</p>
+    <p><a href="{% url 'category_detail' pk=c_pk %}">Назад</a></p>
+</body>
+</html>

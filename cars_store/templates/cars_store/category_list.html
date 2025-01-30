@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Категории:</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <p><a href="{% url 'create_category' %}">Добавить товар</a></p>
+    <h1>Категория:</h1>
+    {% for category in categories %}
+        <p><b><a href="{% url 'category_detail' pk=category.pk %}">{{ category.title }}</a></b></p>
+    {% endfor %}
+</body>
+</html>

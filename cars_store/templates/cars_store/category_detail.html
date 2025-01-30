@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Категория - {{ category.title }}</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Категория - {{ category.title }}</h1>
+    <p><a href="{% url 'create_good' pk=category.pk %}">Добавить товар</a></p>
+    <h2>Товары:</h2>
+    {% for good in goods %}
+        <p><b><a href="{% url 'category_detail' pk=category.pk %}/good/{{good.pk}}">{{ good.title }}</a></b></p>
+    {% endfor %}
+    <p><a href="{% url 'category_list' %}">Назад</a></p>
+</body>
+</html>
