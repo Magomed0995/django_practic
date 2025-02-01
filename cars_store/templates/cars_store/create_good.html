@@ -1,15 +1,16 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <title>Добавить товар</title>
-    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'cars_store/css/color.css' %}"></head>
 </head>
 <body>
     <h1>Добавить товар</h1>
-    <form method="post">
+    <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {% form.as_p %}
+        {{ form.as_p }}
         <button type="submit">Отправить</button>
     </form>
 </body>

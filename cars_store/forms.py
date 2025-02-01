@@ -9,5 +9,5 @@ class CategoryForms(forms.ModelForm):
 class GoodsForms(forms.ModelForm):
     class Meta:
         model = Goods
-        fields = ('title', 'description', 'photo', 'price', 'category')
-        
+        fields = ('title', 'description', 'photo', 'price',)
+        read_only_fields = ('category',)
